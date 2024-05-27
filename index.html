@@ -1,40 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Beautiful Website</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Immersive Nature Escape</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome!</h1>
+    <header id="header">
+        <h1>Immersive Nature Escape</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="banner">
-            <h2>Beautiful Scenery</h2>
-            <img src="image.jpg" alt="A scenic landscape">
-            <p>Explore the wonders of nature</p>
-            <button id="next-button">Next</button>
+        <section class="hero">
+            <div class="hero-video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="path/to/sunrise-timelapse.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-content">
+                <h2>Escape to Nature's Embrace</h2>
+                <p>Explore the wonders of our planet and reconnect with yourself.</p>
+                <a href="#about" class="hero-button">Learn More</a>
+            </div>
         </section>
 
-        <section class="content">
-            <h3>This is some beautiful content!</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod magna ut diam placerat, vitae aliquam quam interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <div class="about-content" data-contentful-id="about-content">
+                </div>
+            <img src="path/to/waterfall-image.jpg" alt="Majestic Waterfall">
+        </section>
+
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="services-content" data-contentful-id="services-content">
+                </div>
+            <img src="path/to/coral-reef-image.jpg" alt="Vibrant Coral Reef">
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-content" data-contentful-id="contact-content">
+                </div>
+            <img src="path/to/starry-night-image.jpg" alt="Starry Night Sky">
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Your Email">
+                <textarea name="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 A Beautiful Website</p>
+        <p>&copy; Immersive Nature Escape 2024</p>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 </body>
 </html>
+
